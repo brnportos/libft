@@ -7,5 +7,6 @@
 #include <stddef.h>
 #include <stdio.h>
 void    *ft_memset(void *dest, int c, size_t len);
+void    ft_bzero(void *buffer, size_t len);
 
 #endif
