@@ -1,6 +1,6 @@
 #include "../include/libft.h"
 
-void	*ft_memset(void *dest, int c, size_t len)
+void	*ft_memset(void *dest, int value, size_t len)
 {
 	unsigned char	*ptr;
 	size_t		i;
@@ -8,6 +8,6 @@ void	*ft_memset(void *dest, int c, size_t len)
 	ptr = (unsigned char *)dest;
 	i = 0;
 	while (i < len)
-		ptr[i++] = c;
+		ptr[i++] = (unsigned char)value;
 	return (dest);
 }
