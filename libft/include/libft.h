@@ -9,5 +9,6 @@
 void    *ft_memset(void *dest, int c, size_t len);
 void    ft_bzero(void *buffer, size_t len);
 void    *ft_memcpy(void *dest, const void *src, size_t len);
+int ft_isalpha(int alpha);
 
 #endif
