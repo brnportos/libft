@@ -1,8 +1,6 @@
-#include "../include/libft.h"
-#include <assert.h>
-#include <stdio.h>
+#include "test.h"
 
-void	ft_TDD()
+void	ft_isdigit_TDD()
 {
 	assert(ft_isdigit('0') == 1);
 	assert(ft_isdigit('9') == 1);
@@ -10,12 +8,4 @@ void	ft_TDD()
 	assert(ft_isdigit(47) == 0);
 	assert(ft_isdigit(58) == 0);
 	printf(GREEN"ft_isdigit TDD: Passed\n"RESET);
-}
-
-int	main()
-{
-	printf("Start ft_isdigit TDD tests\n");
-	ft_TDD();
-	printf("All tests passed successfully\n");
-	return (0);
 }

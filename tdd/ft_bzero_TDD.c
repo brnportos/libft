@@ -1,6 +1,4 @@
-#include "../include/libft.h"
-#include <assert.h>
-#include <stdio.h>
+#include "test.h"
 
 void	ft_TDD_basic_bzero()
 {
@@ -30,7 +28,7 @@ void	ft_TDD_partial_bzero()
 	printf(GREEN"ft_bzero TDD partial bzero: passed\n"RESET);
 }
 
-void	ft_TDD_zero_length()
+void	ft_TDD_bzero_zero_length()
 {
 	char	buf[5] = {'a', 'b', 'c', 'd', 'e'};
 
@@ -43,7 +41,7 @@ void	ft_TDD_zero_length()
 	printf(GREEN"ft_bzero TDD zero length: passed\n"RESET);
 }
 
-void	ft_TDD_int_array()
+void	ft_TDD_bzero_int_array()
 {
 	size_t	i;
 	int	arr[5] = {1, 2, 3, 4, 5};
@@ -58,7 +56,7 @@ void	ft_TDD_int_array()
 	printf(GREEN"ft_bzero TDD integer array: passed\n"RESET);
 }
 
-void	ft_TDD_large_buffer()
+void	ft_TDD_bzero_large_buffer()
 {
 	size_t	i;
 	char	buf[1000];
@@ -73,7 +71,7 @@ void	ft_TDD_large_buffer()
 	printf(GREEN"ft_bzero TDD large buffer: passed\n"RESET);
 }
 
-void	ft_TDD_against_libc()
+void	ft_TDD_bzero_against_libc()
 {
 	size_t	i;
 	char	a[10];
@@ -88,16 +86,4 @@ void	ft_TDD_against_libc()
 		i++;
 	}
 	printf(GREEN"ft_bzero TDD against libc: passed\n"RESET);
-}
-
-int	main()
-{
-	printf("Start ft_bzero TDD\n");
-	ft_TDD_basic_bzero();
-	ft_TDD_partial_bzero();
-	ft_TDD_zero_length();
-	ft_TDD_int_array();
-	ft_TDD_large_buffer();
-	ft_TDD_against_libc();
-	printf("All tests passed successfully\n");
 }

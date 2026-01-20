@@ -1,8 +1,6 @@
-#include "../include/libft.h"
-#include <assert.h>
-#include <stdio.h>
+#include "test.h"
 
-void	ft_TDD_basic_fill()
+void	ft_TDD_memset_basic_fill()
 {
 	size_t	i;
 	char	buf[6];
@@ -16,7 +14,7 @@ void	ft_TDD_basic_fill()
 	printf(GREEN"ft_memset TDD basic fill: passed\n"RESET);
 }
 
-void    ft_TDD_zero_fill()
+void    ft_TDD_memset_zero_fill()
 {
         size_t  i;
         char    buf[6];
@@ -30,7 +28,7 @@ void    ft_TDD_zero_fill()
         printf(GREEN"ft_memset TDD zero fill: passed\n"RESET);
 }
 
-void	ft_TDD_partial_fill()
+void	ft_TDD_memset_partial_fill()
 {
 	char	buf[6] = {'a', 'b', 'c', 'd', 'e', 'f'};
 	ft_memset(buf, 'x', 3);
@@ -44,7 +42,7 @@ void	ft_TDD_partial_fill()
 	printf(GREEN"ft_memset TDD partial fill: passed\n"RESET);
 }
 
-void	ft_TDD_zero_length()
+void	ft_TDD_memset_zero_length()
 {
 	char buf[6] = {'a', 'b', 'c', 'd', 'e', 'f'};
 	ft_memset(buf, 'x', 0);
@@ -58,7 +56,7 @@ void	ft_TDD_zero_length()
 	printf(GREEN"ft_memset TDD  zero length: passed\n"RESET);
 }
 
-void	ft_TDD_return_value()
+void	ft_TDD_memset_return_value()
 {
 	char	buf[6];
 	void	*retrn;
@@ -68,7 +66,7 @@ void	ft_TDD_return_value()
 	printf(GREEN"ft_memset TDD  return value: passed\n"RESET); //vary immportant
 }
 
-void	ft_TDD_value_truncation()
+void	ft_TDD_memset_value_truncation()
 {
 	size_t	i;
 	unsigned char	buf[6];
@@ -83,7 +81,7 @@ void	ft_TDD_value_truncation()
 	printf(GREEN"ft_memset TDD value truncation: passed\n"RESET);
 }
 
-void	ft_TDD_large_buffer()
+void	ft_TDD_memset_large_buffer()
 {
 	size_t	i;
 	char	buf[1000];
@@ -98,7 +96,7 @@ void	ft_TDD_large_buffer()
 	printf(GREEN"ft_memset TDD large buffer: passed\n"RESET);
 }
 
-void	ft_TDD_int_array()
+void	ft_TDD_memset_int_array()
 {
 	size_t	i;
 	int	arr[6];
@@ -113,7 +111,7 @@ void	ft_TDD_int_array()
 	printf(GREEN"ft_memset TDD integer array: passed\n"RESET);
 }
 
-void	ft_TDD_against_libc()
+void	ft_TDD_memset_against_libc()
 {
 	size_t	i;
 	char	a[10];
@@ -128,19 +126,4 @@ void	ft_TDD_against_libc()
 		i++;
 	}
 	printf(GREEN"ft_memset TDD against libc: passed\n"RESET);
-}
-
-int	main()
-{
-	printf("Start ft_memset TDD\n");
-	ft_TDD_basic_fill();
-	ft_TDD_zero_fill();
-	ft_TDD_partial_fill();
-	ft_TDD_zero_length();
-	ft_TDD_return_value();
-	ft_TDD_value_truncation();
-	ft_TDD_large_buffer();
-	ft_TDD_int_array();
-	ft_TDD_against_libc();
-	printf("All tests passed successfully\n");
 }

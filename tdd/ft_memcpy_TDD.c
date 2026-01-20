@@ -1,6 +1,4 @@
-#include "../include/libft.h"
-#include <stdio.h>
-#include <assert.h>
+#include "test.h"
 
 void	ft_TDD_basic_memcpy()
 {
@@ -32,7 +30,7 @@ void	ft_TDD_partial_memcpy()
 	printf(GREEN "ft_memcpy TDD partial memcpy: passed\n"RESET);
 }
 
-void	ft_TDD_zero_length()
+void	ft_TDD_memcpy_zero_length()
 {
 	char	src[5] = {'a', 'b', 'c', 'd', 'e'};
 	char	dst[5] = {'p', 'm', 'n', 'l', 'k'};
@@ -46,7 +44,7 @@ void	ft_TDD_zero_length()
 	printf(GREEN "ft_memcpy TDD zero length: passed\n"RESET);
 }
 
-void	ft_TDD_return_value()
+void	ft_TDD_memcpy_return_value()
 {
 	char	src[3] = {'a', 'b', 'c'};
 	char	dst[3];
@@ -57,7 +55,7 @@ void	ft_TDD_return_value()
 	printf(GREEN "ft_memcpy TDD return value: passed\n"RESET);
 }
 
-void	ft_TDD_int_array()
+void	ft_TDD_memcpy_int_array()
 {
 	size_t	i;
 	char	src[5] = {1, 2, 3, 4, 5};
@@ -73,7 +71,7 @@ void	ft_TDD_int_array()
 	printf(GREEN "ft_memcpy TDD integer array: passed\n"RESET);
 }
 
-void	ft_TDD_large_buffer()
+void	ft_TDD_memcpy_large_buffer()
 {
 	size_t	i;
 	char	src[1000];
@@ -96,7 +94,7 @@ void	ft_TDD_large_buffer()
 	printf(GREEN "ft_memcpy TDD large buffer: passed\n"RESET);
 }
 
-void	ft_TDD_against_libc()
+void	ft_TDD_memcpy_against_libc()
 {
 	size_t	i;
 	char	src[10];
@@ -118,17 +116,4 @@ void	ft_TDD_against_libc()
 		i++;
 	}
 	printf(GREEN "ft_memcpy TDD against libc: passed\n"RESET);
-}
-
-int	main()
-{
-	printf("Start ft_memcpy TDD tests\n");
-	ft_TDD_basic_memcpy();
-	ft_TDD_partial_memcpy();
-	ft_TDD_zero_length();
-	ft_TDD_return_value();
-	ft_TDD_int_array();
-	ft_TDD_large_buffer();
-	ft_TDD_against_libc();
-	printf("All tests passed successfully\n");
 }
