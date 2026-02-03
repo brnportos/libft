@@ -17,14 +17,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 $(NAME): $(OBJ)
 	@ar rcs $@ $^
-	echo "libft.a created"
 clean:
 	@rm -rf $(OBJ_DIR)
-	echo "Obj removed"
 
 fclean: clean
 	@rm -f $(NAME)
-	echo "Obj and libft.a removed"
 
 re: fclean all
 
