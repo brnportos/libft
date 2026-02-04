@@ -19,11 +19,3 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
         ft_memcpy(dst, srce, n);
     return (dest);
 }
-
-int main()
-{
-    size_t  n = 5;
-    char s[] = "abcdefjkl";
-    printf("%s\n", (char *)ft_memmove(s, s+2, n));
-    printf("%s\n", (char *)memmove(s, s+2, n));
-}
