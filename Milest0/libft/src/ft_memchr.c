@@ -5,8 +5,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*s_tmp;
 	unsigned char	c_tmp;
 
-	if (!s)
-		return ;
 	s_tmp = (unsigned char *)s;
 	c_tmp = (unsigned char)c;
 	while(*s_tmp &&  n-- > 0)
@@ -15,5 +13,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)s_tmp);
 		s_tmp++;
 	}
-	return (NULL);
+	return (0);
 }
