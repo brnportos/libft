@@ -3,8 +3,8 @@
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char    *strmapi;
-    int     i;
     size_t  len;
+    size_t  i;
 
     if (!s || !f)
         return (NULL);
