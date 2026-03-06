@@ -43,5 +43,6 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 t_list  *ft_lstnew(void *content);
+void    sort_single_linked_lst(t_list **root);
 
 #endif
