@@ -37,6 +37,7 @@ SRC = ft_isalpha.c \
       ft_strmapi.c \
       ft_striteri.c \
       ft_lstnew.c \
+      free_doubly_lst.c \
       sort_single_linked_lst.c  
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 

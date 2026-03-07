@@ -10,6 +10,13 @@ typedef struct s_list
     struct s_list   *next;
 }                   t_list;
 
+typedef struct s_node
+{
+    void            *content;
+    struct s_node   *next;
+    struct s_node   *prev;
+}                   t_node;
+
 int	ft_isalpha(int alpha);
 int     ft_isdigit(int digit);
 int     ft_isalnum(int c);
@@ -44,5 +51,7 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 t_list  *ft_lstnew(void *content);
 void    sort_single_linked_lst(t_list **root);
+
+void    free_doubly_lst(t_node **tail, t_node **head);
 
 #endif
