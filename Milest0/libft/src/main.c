@@ -5,16 +5,23 @@ int main()
 {
     int d = 5;
     int e = 7;
+    int f = 8;
+    int j = 9;
+    t_list  *head = NULL;
+
     t_list  *node = ft_lstnew(&d);
-    t_list  *new;
+    t_list  *node1 = ft_lstnew(&e);
+    t_list  *node2 = ft_lstnew(&f);
+    t_list  *node3 = ft_lstnew(&j);
+    ft_lstadd_front(&head, node);
+    ft_lstadd_front(&head, node1);
+    ft_lstadd_front(&head, node2);
+    ft_lstadd_front(&head, node3);
 
-    new->next->content = &e;
-    new->next->next = NULL;
-    printf("%d\n", *(int *)node->content);
-    ft_lstadd_front(&node, new);
-    printf("%d\n", *(int *)new->next->content);
+    print_list(head);
+    printf("\n");
 
-    /*
+    
     int a = 1;
     int b = 3;
     int c = 7;
@@ -52,5 +59,5 @@ int main()
         curr = curr->prev;
     }
     free_doubly_lst(&tail, &head);
-    */
+    
 }
