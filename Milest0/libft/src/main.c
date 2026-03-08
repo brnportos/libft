@@ -3,6 +3,7 @@
 
 int main()
 {
+    /*
     int d = 5;
     int e = 7;
     int f = 8;
@@ -20,8 +21,9 @@ int main()
 
     print_list(head);
     printf("\n");
+    free_single_lst(&head);
 
-    
+
     int a = 1;
     int b = 3;
     int c = 7;
@@ -59,5 +61,5 @@ int main()
         curr = curr->prev;
     }
     free_doubly_lst(&tail, &head);
-    
+    */
 }

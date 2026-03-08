@@ -40,6 +40,7 @@ SRC = ft_isalpha.c \
       free_doubly_lst.c \
       ft_lstadd_front.c \
       print_list.c \
+      free_single_lst.c \
       sort_single_linked_lst.c  
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
