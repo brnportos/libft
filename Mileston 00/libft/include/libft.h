@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/11 18:52:27 by portos            #+#    #+#             */
+/*   Updated: 2026/03/11 18:52:28 by portos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 #define LIBFT_H
 
@@ -48,6 +60,8 @@ char    **ft_split(char const *s, char c);
 char    *ft_itoa(int n);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+void ft_putchar_fd(char c, int fd);
 
 t_list  *ft_lstnew(void *content);
 void    ft_lstadd_front(t_list **lst, t_list *new);

@@ -36,6 +36,7 @@ SRC = ft_isalpha.c \
       ft_itoa.c \
       ft_strmapi.c \
       ft_striteri.c \
+      ft_putchar_fd.c \
       ft_lstnew.c \
       free_doubly_lst.c \
       ft_lstadd_front.c \
