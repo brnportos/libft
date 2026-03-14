@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 18:52:27 by portos            #+#    #+#             */
-/*   Updated: 2026/03/13 19:44:14 by portos           ###   ########.fr       */
+/*   Updated: 2026/03/14 19:55:34 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 void ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 t_list  *ft_lstnew(void *content);
 void    ft_lstadd_front(t_list **lst, t_list *new);
