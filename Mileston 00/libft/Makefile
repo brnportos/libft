@@ -42,6 +42,7 @@ SRC = ft_isalpha.c \
       free_doubly_lst.c \
       ft_lstadd_front.c \
       ft_lstsize.c \
+      ft_lstlast.c \
       print_list.c \
       free_single_lst.c \
       ft_putendl_fd.c \
