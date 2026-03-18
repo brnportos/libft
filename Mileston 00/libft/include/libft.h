@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 18:52:27 by portos            #+#    #+#             */
-/*   Updated: 2026/03/17 20:01:01 by portos           ###   ########.fr       */
+/*   Updated: 2026/03/18 20:35:51 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void    print_list(t_list *node);
 void    free_single_lst(t_list **root);
 t_list  *ft_lstlast(t_list *lst);
 void    ft_lstadd_back(t_list **lst, t_list *new);
+void    ft_lstdelone(t_list *lst, void (*del)(void *));
 void    free_doubly_lst(t_node **tail, t_node **head);
 
 #endif
