@@ -45,6 +45,7 @@ SRC = ft_isalpha.c \
       ft_lstlast.c \
       ft_lstadd_back.c \
       ft_lstdelone.c \
+      ft_lstclear.c \
       print_list.c \
       free_single_lst.c \
       ft_putendl_fd.c \
@@ -60,6 +61,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 $(NAME): $(OBJ)
 	@ar rcs $@ $^
+
 clean:
 	@rm -rf $(OBJ_DIR)
 
