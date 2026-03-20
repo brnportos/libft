@@ -1,0 +1,7 @@
+create file name "testShell00"
+change size= truncate -s 40 testShell00
+change date and time = touch -t 202606012342 testShell00
+change Others permission= chmod o=rx testShell00
+change groupes permission = chmod g=rx testShell00
+change user permission = chmod u=r testShell00
+compress it into tar= tar -cf testShell00.tar testShell00
