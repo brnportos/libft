@@ -1,0 +1,53 @@
+create directory name= mkdir test0
+create link= ln -s test0 test6
+change date and time = touch -t 202606012342 test0
+change Others permission= chmod o=rx test0
+change groupes permission = chmod g=rx test0
+change user permission = chmod u=r test0
+
+change date and time = touch -h -t 202606012342 test6
+change Others permission= chmod o=rx test6
+change groupes permission = chmod g=rx test6
+change user permission = chmod u=r test6
+
+create file name = vim test1
+change size= truncate -s 4 test1
+change date and time = touch -t 202606012342 test1
+change Others permission= chmod o=rx test1
+change groupes permission = chmod g=rx test1
+change user permission = chmod u=r test1
+
+create directory name= mkdir test2
+change date and time = touch -t 202606012342 test2
+change Others permission= chmod o=rx test2
+change groupes permission = chmod g=rx test2
+change user permission = chmod u=r test2
+
+create file name = touch test3
+create link = ln -P test3 test5
+change size= truncate -s 1 test3
+change date and time = touch -t 202606012342 test3
+change Others permission= chmod o=rx test3
+change groupes permission = chmod g=rx test3
+change user permission = chmod u=r test3
+
+change date and time = touch -t 202606012342 test5
+change size= truncate -s 1 test3
+change size= truncate -s 1 test5
+change Others permission= chmod o=rx test5
+change groupes permission = chmod g=rx test5
+change user permission = chmod u=r test5
+
+create file name = touch test4
+change size= truncate -s 2 test4
+change date and time = touch -t 202606012342 test4
+change Others permission= chmod o=rx test4
+change groupes permission = chmod g=rx test4
+change user permission = chmod u=r test4
+
+change size= truncate -s 2 test0
+change date and time = touch -t 202606012342 test0
+change Others permission= chmod o=rx testShell00
+change groupes permission = chmod g=rx testShell00
+change user permission = chmod u=r testShell00
+compress it into tar= tar -cf testShell00.tar testShell00
