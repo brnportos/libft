@@ -45,9 +45,5 @@ change Others permission= chmod o=rx test4
 change groupes permission = chmod g=rx test4
 change user permission = chmod u=r test4
 
-change size= truncate -s 2 test0
-change date and time = touch -t 202606012342 test0
-change Others permission= chmod o=rx testShell00
-change groupes permission = chmod g=rx testShell00
-change user permission = chmod u=r testShell00
-compress it into tar= tar -cf testShell00.tar testShell00
+compress it into tar= tar -cf ex02.tar *
+decompress = tar -xf ex02.tar
