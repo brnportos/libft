@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:13:57 by portos            #+#    #+#             */
-/*   Updated: 2026/03/23 20:18:56 by portos           ###   ########.fr       */
+/*   Updated: 2026/03/24 21:02:39 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void    lstadd_middle(t_list **head, int content, int position)
 {
     t_list *node;
-    t_list  *curr;
     t_list  *tmp;
     int i;
     
