@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   del_frt_node.c                                     :+:      :+:    :+:   */
+/*   del_last_node.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/29 18:35:12 by portos            #+#    #+#             */
-/*   Updated: 2026/03/31 19:17:18 by portos           ###   ########.fr       */
+/*   Created: 2026/03/31 19:09:34 by portos            #+#    #+#             */
+/*   Updated: 2026/03/31 19:34:01 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,26 @@ void    del(void *data)
 {
     free(data);
 }
-void    del_frt_node(t_list **head)
+
+void    del_last_node(t_list **head)
 {
     t_list  *tmp;
-
+    t_list  *curr;
+    
     if (!*head)
-        return (NULL);
-    tmp = *head;
-    *head = (*head)->next;
+        return 
+    if (!*head->next)
+    {
+        free((*head)->content);
+        free(*head);
+        return ;
+    }
+    curr = *head;
+    while (curr->next)
+    {
+        tmp = curr;
+        curr = curr->next;
+    }
     tmp->next = NULL;
-    ft_lstclear(&tmp, del);
+    ft_lstclear(&curr, del);
 }
