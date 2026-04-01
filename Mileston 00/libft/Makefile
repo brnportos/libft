@@ -54,7 +54,8 @@ SRC = ft_isalpha.c \
       ft_putnbr_fd.c \
       sort_single_linked_lst.c \
       del_frt_node.c \
-      del_last_node.c 
+      del_last_node.c \
+      del_middle_node.c 
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
