@@ -1,5 +1,22 @@
 #include "get_next_line.h"
 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*sub;
+
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (NULL);
+	if (len > (ft_strlen(s) - start))
+		len = (ft_strlen(s) - start);
+	sub = malloc(sizeof * sub * (len + 1));
+	if (!sub)
+		return (NULL);
+	ft_strlcpy(sub, s + start, len + 1);
+	return (sub);
+}
+
 char    *read_join(int fd, char *tmp)
 {
     char    *buf;
