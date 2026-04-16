@@ -41,6 +41,20 @@ char    *read_join(int fd, char *tmp)
     }
     return (free(buf), tmp);
 }
+static char	*line_extraction(char *tmp)
+{
+	int		i;
+	char	*line;
+
+	i = 0;
+	if (!tmp[i])
+		return (NULL);
+	while (tmp[i] && tmp[i] != '\n')
+		i++;
+	line = ft_substr(tmp, 0, i + (tmp[i] == '\n'));
+	return (line);
+}
+
 char *get_next_line(int fd)
 {
     char    *line;
