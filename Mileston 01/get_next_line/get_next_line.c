@@ -54,6 +54,20 @@ static char	*line_extraction(char *tmp)
 	line = ft_substr(tmp, 0, i + (tmp[i] == '\n'));
 	return (line);
 }
+static char	*updating_line(char *tmp)
+{
+    char    *keep_tmp;
+    int i;
+
+    i = 0;
+    while (tmp[i] && tmp[i] != '\n')
+        i++;
+    if (!tmp[i])
+        return (free(tmp), tmp = NULL, NULL);
+    keep_tmptmp = ft_substr(tmp, i + 1, ft_strlen(tmp) - i);
+    free(tmp);
+    return (keep_tmp);
+}
 
 char *get_next_line(int fd)
 {
@@ -65,4 +79,7 @@ char *get_next_line(int fd)
     tmp = read_join(fd, tmp);
     if (!tmp)
         return (NULL);
+    line = line_extraction(tmp);
+    tmp = updating_line(tmp);
+    return (line);
 }
