@@ -48,3 +48,15 @@ char *ft_strdup(char *dest, char *src)
     dup[i] = '\0';
     return (dup);
 }
+char	*ft_strchr(const char *s, int c)
+{
+
+    while (*s != (char)c)
+    {
+        if (*s == '\0')
+            return (NULL);
+        s++;
+    }
+    return ((char *)s);
+}
+
