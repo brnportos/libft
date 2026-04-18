@@ -9,6 +9,23 @@ int ft_strlen(char *str)
         i++;
     return (i);
 }
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+    size_t  i;
+    size_t  src_len;
+
+    if (size == 0)
+        return (src_len);
+    i = 0;
+    src_len = ft_strlen(src);
+    while (src[i] && i < size - 1)
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\n';
+    return (src_len);
+}
 
 char *ft_strdup(char *dest, char *src)
 {
