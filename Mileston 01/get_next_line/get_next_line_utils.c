@@ -60,3 +60,32 @@ char	*ft_strchr(const char *s, int c)
     return ((char *)s);
 }
 
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+    int i;
+    int j;
+    char *join;
+
+    if (!s1)
+        return (ft_strdup(s2));
+    else if (!s2)
+        return (ft_strdup(s1));
+    else if (!s1 && !s2)
+        return (NULL);
+    join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+    if (!join)
+        return (NULL);
+    i = 0;
+    while (s1[i])
+    {
+        join[i] = s1[i];
+        i++;
+    }
+    j = 0;
+    while (s2[j])
+        join[i++] = s2[j++];
+    join[i] = '\0';
+    return (join);
+
+}
+
