@@ -1,23 +1,24 @@
-#include "get_next_line"
+#include "get_next_line.h"
 
-int ft_strlen(char *str)
+size_t ft_strlen(const char *str)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while (str[i])
         i++;
     return (i);
 }
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
     size_t  i;
     size_t  src_len;
 
+    src_len = ft_strlen(src);
     if (size == 0)
         return (src_len);
     i = 0;
-    src_len = ft_strlen(src);
     while (src[i] && i < size - 1)
     {
         dst[i] = src[i];
@@ -27,17 +28,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
     return (src_len);
 }
 
-char *ft_strdup(char *dest, char *src)
+char *ft_strdup(const char *src)
 {
     int i;
     char    *dup;
     int len;
 
-    if (!dest || !src)
+    if (!src)
         return (NULL);
-    len = ft_strlen(str);
+    len = ft_strlen(src);
     i = 0;
-    dup = malloc(len + 1)
+    dup = malloc(len + 1);
     if (!dup)
         return (NULL);
     while (src[i])
@@ -48,6 +49,7 @@ char *ft_strdup(char *dest, char *src)
     dup[i] = '\0';
     return (dup);
 }
+
 char	*ft_strchr(const char *s, int c)
 {
 

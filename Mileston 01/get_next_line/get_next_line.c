@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-char    *read_join(int fd, char *tmp)
+static char    *read_join(int fd, char *tmp)
 {
     char    *buf;
     char    *keep_tmp;
@@ -31,12 +31,12 @@ char    *read_join(int fd, char *tmp)
         return (NULL);
     while (!ft_strchr(tmp, '\n') && size > 0)
     {
-        size = read(fd, buf, BUFFER_SIZE)
+        size = read(fd, buf, BUFFER_SIZE);
         if (size == -1)
             return (free(tmp), free(buf), NULL);
         buf[size] = '\0';
         keep_tmp = tmp;
-        tmp = ft_strjoin(keep_tmp, tmp);
+        tmp = ft_strjoin(keep_tmp, buf);
         free(keep_tmp);
     }
     return (free(buf), tmp);
@@ -66,7 +66,7 @@ static char	*moving_next_line(char *tmp)
         i++;
     if (!tmp[i])
         return (free(tmp), tmp = NULL, NULL);
-    keep_tmptmp = ft_substr(tmp, i + 1, ft_strlen(tmp) - i);
+    keep_tmp = ft_substr(tmp, i + 1, ft_strlen(tmp) - i);
     free(tmp);
     return (keep_tmp);
 }
