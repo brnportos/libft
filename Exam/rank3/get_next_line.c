@@ -11,7 +11,7 @@ char	*get_next_line(int fd)
 	int		val = 0;
 
 	if (fd < 0 || !buff)
-		return (NULL);
+		return (free(buf), NULL);
 	while ((val = read(fd, &c, 1)) > 0)
 	{
 		buff[i++] = c;

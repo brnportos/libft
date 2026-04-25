@@ -4,5 +4,6 @@
 
 void    ft_putchar(char c, int *len);
 void    ft_putstr(char *str, int *len);
+void    is_address(void *ptr, int *len);
 
 #endif
