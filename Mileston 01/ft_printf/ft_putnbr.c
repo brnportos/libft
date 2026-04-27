@@ -2,6 +2,8 @@
 
 void    ft_putnbr(int n, int *len)
 {
+    if (!len)
+        return ;
     if (n == -2147483648)
         ft_putchar(n, len);
     else if(n < 0)
